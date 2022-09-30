@@ -1,0 +1,19 @@
+body { 
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    background-color: rgb(218, 180, 253);
+    white-space: pre;
+}
+
+h1 {
+    font-size: 50px;
+    color:rgb(2, 54, 24);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+h1:hover {
+    font-size: 80px;
+    color:rgb(99, 0, 0);
+    border: 9px solid rgb(0, 0, 0);
+}

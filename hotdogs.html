@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Calcuating Hotdog Prices!</title>
+        <link rel="stylesheet" href="hotdogs.css">
+    </head>
+    <body>
+        <h1>Welcome to Joe's Hotdog Stand!</h1>
+        <script>
+            // declaring variables
+            var subtotal;
+            var subtotalTax;
+            var total;
+            let discount = false;
+            // 
+            // declaring prompt variables
+            var dogs =  prompt("How many hotdogs do you wish to purchase?");
+            var fries =  prompt("How many french fries do you wish to purchase?");
+            var drinks =  prompt("How many drinks do you wish to purchase?");
+            var subtotalOG = ((dogs * 4.25) + (fries * 2.6) + (drinks * 1.5));
+
+            // if discount is applicable:
+            if (subtotalOG > 20) {
+                var subtotalDis = (subtotalOG * .9);
+                discount = true;
+                subtotalTax = (subtotalDis * .0625);
+                total = subtotalDis + subtotalTax;
+            } else {
+                subtotalTax = (subtotalOG * .0625);
+                total = subtotalOG + subtotalTax;
+            }
+            
+            document.write("You chose to purchase " + dogs + " hotdogs.\n");
+            document.write("You chose to purchase " + fries + " french fries.\n");
+            document.write("You chose to purchase " + drinks + " drinks.\n");
+            document.write("The original subtotal, before discounts or taxes, was: " + subtotalOG.toFixed(2) + " dollars.\n");
+            if (discount) {
+                document.write("You were eligble for a discount. After the discount, and before taxes, your total was: " + subtotalDis.toFixed(2) + " dollars.\n");
+            }
+            document.write("Your tax was: " + subtotalTax.toFixed(2) + " dollars.\n");
+            document.write("Your total, with tax, is: " + total.toFixed(2) + " dollars.\n");
+        </script>
+    </body>
+</html>
