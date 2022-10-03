@@ -31,15 +31,16 @@
                 total = subtotalOG + subtotalTax;
             }
             
+            // Math.round(x*100) / 100 rounds the variable to two decimal places
             document.write("You chose to purchase " + dogs + " hotdogs.\n");
             document.write("You chose to purchase " + fries + " french fries.\n");
             document.write("You chose to purchase " + drinks + " drinks.\n");
-            document.write("The original subtotal, before discounts or taxes, was: " + subtotalOG.toFixed(2) + " dollars.\n");
+            document.write("The original subtotal, before discounts or taxes, was: " + Math.round(subtotalOG * 100) / 100 + " dollars.\n");
             if (discount) {
-                document.write("You were eligible for a discount. After the discount, and before taxes, your total was: " + subtotalDis.toFixed(2) + " dollars.\n");
+                document.write("You were eligible for a discount. After the discount, and before taxes, your total was: " + Math.round(subtotalDis * 100) / 100 + " dollars.\n");
             }
-            document.write("Your tax was: " + subtotalTax.toFixed(2) + " dollars.\n");
-            document.write("Your total, with tax, is: " + total.toFixed(2) + " dollars.\n");
+            document.write("Your tax was: " + Math.round(subtotalTax * 100) / 100 + " dollars.\n");
+            document.write("Your total, with tax, is: " + Math.round(total * 100) / 100 + " dollars.\n");
         </script>
     </body>
 </html>
